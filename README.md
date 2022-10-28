@@ -1,4 +1,6 @@
-﻿Phrase frequencies in Google Books
+﻿# THIS IS WORK IN PROGRESS
+
+# Phrase frequencies in Google Books
 
 It was a study project on the Data Scientist upskilling course at School 21 (https://edu.21-school.ru/). Project task was to find an API in the Internet and create a web-service using Flask, FastAPI or a Telegram bot.
 
@@ -8,10 +10,7 @@ The idea is to provide an interface where a user can enter the same data (langua
 
 This version supports only some corpora: only the 2019 versions of the English, French, German, Italian, Russian and Spanish corpora.
 
-The web-service gets frequencies for each year in the interval and compares the using paired t-test.
-
-
-I produced the Jupyter notebook. Sergey Krosheninnikov prepared a py file, and Roman (https://github.com/khimich1) designed an MVP (minimum viable product) interface (only the Russian language and one time interval).
+The web-service gets frequencies for each year in the interval and compares the using the Wilcoxon signed-rank test.
 
 ### Files:
 - d08_0.ipynb – original Jupyter notebook
@@ -19,4 +18,4 @@ I produced the Jupyter notebook. Sergey Krosheninnikov prepared a py file, and R
 - d08_1.ipynb, d08_1.py – notebook and python script with class definition for the MVP version
 - p-value_phrases-main.zip – web-interface
 
-This version is hosted at RomanSmit1.pythonanywhere.com
+This version is hosted at
