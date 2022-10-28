@@ -1,5 +1,10 @@
 ﻿# THIS IS WORK IN PROGRESS
 
+Only d08_wilcoxon.ipynb, d08_wilcoxon.ru and d08_student.ipynb are finalized by the web-interface is not ready yet.
+
+## New in this version:
+- Student t-test was changed to Wilcoxon signed-rank test because distributions are not necessarily normal.
+
 # Phrase frequencies in Google Books
 
 It was a study project on the Data Scientist upskilling course at School 21 (https://edu.21-school.ru/). Project task was to find an API in the Internet and create a web-service using Flask, FastAPI or a Telegram bot.
