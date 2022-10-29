@@ -3,7 +3,7 @@
 Only d08_wilcoxon.ipynb, d08_wilcoxon.ru and d08_student.ipynb are finalized by the web-interface is not ready yet.
 
 ## New in this version:
-- Student t-test was changed to Wilcoxon signed-rank test because distributions are not necessarily normal.
+- Changed the test from one-sided to two sided version and added a continuity correction.
 
 # Phrase frequencies in Google Books
 
@@ -15,7 +15,7 @@ The idea is to provide an interface where a user can enter the same data (langua
 
 This version supports only some corpora: only the 2019 versions of the English, French, German, Italian, Russian and Spanish corpora.
 
-The web-service gets frequencies for each year in the interval and compares the using the Wilcoxon signed-rank test.
+The web-service gets frequencies for each year in the interval and compares the using the Wilcoxon signed-rank test with continuity correction.
 
 ### Files:
 - d08_0.ipynb – original Jupyter notebook

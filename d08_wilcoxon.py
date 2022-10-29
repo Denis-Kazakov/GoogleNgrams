@@ -11,7 +11,6 @@ corpora = {'English': 26,
            'Spanish': 32
           }
 
-
 # Condition for running the comparison cycle
 another_comparison = 'Y'
 
@@ -136,21 +135,23 @@ while another_comparison == 'Y':
     if sum1 == sum2:
         outcome = 'No difference'
     else:
+        compare = stats.wilcoxon(result_1, 
+                                 result_2, 
+                                 alternative='two-sided',
+                                correction=True)
         if sum1 > sum2:
             more_common = ngram_1
             less_common = ngram_2
-            compare = stats.wilcoxon(result_1, result_2, alternative='greater')
         else:
             more_common = ngram_2
             less_common = ngram_1    
-            compare = stats.wilcoxon(result_1, result_2, alternative='less')
 
         if compare.pvalue < alpha:
             significance = 'and the difference is statistically significant'
         else:
             significance = 'but the difference is not statistically significant'
 
-        outcome = 'N-gram "{0}" is more common than n-gram "{1}",\n {2} \n(one-sided Wilcoxon rank-sum test, p-value = {3})'.format(more_common, 
+        outcome = 'N-gram "{0}" is more common than n-gram "{1}",\n {2} \n(Wilcoxon rank-sum test, p-value = {3})'.format(more_common, 
                                                                                         less_common, 
                                                                                         significance, 
                                                                                         compare.pvalue) 
@@ -175,8 +176,5 @@ while another_comparison == 'Y':
             print('Wrong answer. Try again')
         else:
             not_selected = False
-
-
-
 
 
